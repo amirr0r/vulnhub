@@ -1,0 +1,1 @@
+# Nmap 7.91 scan initiated Thu Jan  7 16:26:04 2021 as: nmap -min-rate 5000 --max-retries 1 -sU -sV -oN scan/193.0.14.129-UDP.txt 193.0.14.129

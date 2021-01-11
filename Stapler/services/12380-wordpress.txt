@@ -1,0 +1,83 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.12
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: https://192.168.1.106:12380/blogblog/ [192.168.1.106]
+[32m[+][0m Started: Thu Jan  7 18:33:20 2021
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entries:
+ |  - Server: Apache/2.4.18 (Ubuntu)
+ |  - Dave: Soemthing doesn't look right here
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m XML-RPC seems to be enabled: https://192.168.1.106:12380/blogblog/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access
+
+[32m[+][0m WordPress readme found: https://192.168.1.106:12380/blogblog/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m Registration is enabled: https://192.168.1.106:12380/blogblog/wp-login.php?action=register
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m Upload directory has listing enabled: https://192.168.1.106:12380/blogblog/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m The external WP-Cron seems to be enabled: https://192.168.1.106:12380/blogblog/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 4.2.1 identified (Insecure, released on 2015-04-27).
+ | Found By: Emoji Settings (Passive Detection)
+ |  - https://192.168.1.106:12380/blogblog/, Match: 'wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.1'
+ | Confirmed By: Meta Generator (Passive Detection)
+ |  - https://192.168.1.106:12380/blogblog/, Match: 'WordPress 4.2.1'
+
+[34m[i][0m The main theme could not be detected.
+
+[32m[+][0m Enumerating All Plugins (via Passive Methods)
+
+[34m[i][0m No plugins Found.
+
+[32m[+][0m Enumerating Config Backups (via Passive and Aggressive Methods)
+
+ Checking Config Backups -: |==============================================================================================================================|
+
+[34m[i][0m No Config Backups Found.
+
+[33m[!][0m No WPScan API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 50 daily requests by registering at https://wpscan.com/register
+
+[32m[+][0m Finished: Thu Jan  7 18:33:21 2021
+[32m[+][0m Requests Done: 24
+[32m[+][0m Cached Requests: 25
+[32m[+][0m Data Sent: 6.814 KB
+[32m[+][0m Data Received: 4.102 KB
+[32m[+][0m Memory used: 172.027 MB
+[32m[+][0m Elapsed time: 00:00:01

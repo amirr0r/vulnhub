@@ -1,0 +1,18 @@
+# Nmap 7.91 scan initiated Thu Jan  7 16:42:30 2021 as: nmap -sV -oN scan/192.36.148.17.txt 192.36.148.17
+Nmap scan report for i.root-servers.net (192.36.148.17)
+Host is up (0.037s latency).
+Not shown: 995 closed ports
+PORT    STATE    SERVICE      VERSION
+53/tcp  open     domain       (unknown banner: contact info@netnod.se)
+135/tcp filtered msrpc
+139/tcp filtered netbios-ssn
+179/tcp filtered bgp
+445/tcp filtered microsoft-ds
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.91%I=7%D=1/7%Time=5FF72CBD%P=x86_64-pc-linux-gnu%r(DNSVe
+SF:rsionBindReqTCP,43,"\0A\0\x06\x85\0\0\x01\0\x01\0\0\0\0\x07version\x04b
+SF:ind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x17\x16contact\x20info@
+SF:netnod\.se");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan  7 16:46:10 2021 -- 1 IP address (1 host up) scanned in 220.08 seconds

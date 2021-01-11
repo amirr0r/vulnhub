@@ -1,0 +1,13 @@
+# Nmap 7.91 scan initiated Thu Jan  7 16:39:22 2021 as: nmap -sV -oN scan/193.0.14.129.txt 193.0.14.129
+Nmap scan report for k.root-servers.net (193.0.14.129)
+Host is up (0.037s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  (unknown banner: BIND)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.91%I=7%D=1/7%Time=5FF72B40%P=x86_64-pc-linux-gnu%r(DNSVe
+SF:rsionBindReqTCP,31,"\0/\0\x06\x85\0\0\x01\0\x01\0\0\0\0\x07version\x04b
+SF:ind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x05\x04BIND");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan  7 16:39:49 2021 -- 1 IP address (1 host up) scanned in 26.75 seconds

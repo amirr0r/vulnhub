@@ -1,0 +1,14 @@
+# Nmap 7.91 scan initiated Thu Jan  7 13:33:38 2021 as: nmap -sU -sV -oN UDP-scan.txt 192.168.1.106
+Nmap scan report for red (192.168.1.106)
+Host is up (0.00038s latency).
+Not shown: 995 closed ports
+PORT    STATE         SERVICE     VERSION
+53/udp  open          domain      dnsmasq 2.75
+68/udp  open|filtered dhcpc
+69/udp  open|filtered tftp
+137/udp open          netbios-ns  Samba nmbd netbios-ns (workgroup: WORKGROUP)
+138/udp open|filtered netbios-dgm
+MAC Address: 08:00:27:B1:DD:63 (Oracle VirtualBox virtual NIC)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan  7 13:53:24 2021 -- 1 IP address (1 host up) scanned in 1186.33 seconds

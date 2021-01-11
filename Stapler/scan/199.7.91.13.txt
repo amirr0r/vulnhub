@@ -1,0 +1,9 @@
+# Nmap 7.91 scan initiated Thu Jan  7 16:41:26 2021 as: nmap -sV -oN scan/199.7.91.13.txt 199.7.91.13
+Nmap scan report for d.root-servers.net (199.7.91.13)
+Host is up (0.022s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  NLnet Labs NSD 4
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan  7 16:41:37 2021 -- 1 IP address (1 host up) scanned in 10.89 seconds
