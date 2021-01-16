@@ -1,0 +1,106 @@
+# Nmap 7.91 scan initiated Fri Jan 15 23:20:26 2021 as: nmap --script vuln -oN vuln-scan.txt 192.168.1.25
+Nmap scan report for linux (192.168.1.25)
+Host is up (0.00024s latency).
+Not shown: 997 filtered ports
+PORT    STATE  SERVICE
+22/tcp  closed ssh
+80/tcp  open   http
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=linux
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://linux:80/js/rs;if(s.useForcedLinkTracking||s.bcf){if(!s."
+|     Form id: 
+|     Form action: http://linux/
+|     
+|     Path: http://linux:80/js/rs;if(s.useForcedLinkTracking||s.bcf){if(!s."
+|     Form id: 
+|     Form action: http://linux/
+|     
+|     Path: http://linux:80/js/BASE_URL
+|     Form id: 
+|     Form action: http://linux/
+|     
+|     Path: http://linux:80/js/BASE_URL
+|     Form id: 
+|     Form action: http://linux/
+|     
+|     Path: http://linux:80/wp-login.php
+|     Form id: loginform
+|_    Form action: http://linux/wp-login.php
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /admin/: Possible admin folder
+|   /admin/index.html: Possible admin folder
+|   /wp-login.php: Possible admin folder
+|   /robots.txt: Robots file
+|   /readme.html: Wordpress version: 2 
+|   /feed/: Wordpress version: 4.3.25
+|   /wp-includes/images/rss.png: Wordpress version 2.2 found.
+|   /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.
+|   /wp-includes/images/blank.gif: Wordpress version 2.6 found.
+|   /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.
+|   /wp-login.php: Wordpress login page.
+|   /wp-admin/upgrade.php: Wordpress login page.
+|   /readme.html: Interesting, a readme.
+|   /0/: Potentially interesting folder
+|_  /image/: Potentially interesting folder
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+443/tcp open   https
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=linux
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: https://linux:443/js/u;c.appendChild(o);'+(n?'o.c=0;o.i=setTimeout(f2,100)':'')+'}}catch(e){o=0}return
+|     Form id: 
+|     Form action: https://linux:443/
+|     
+|     Path: https://linux:443/js/u;c.appendChild(o);'+(n?'o.c=0;o.i=setTimeout(f2,100)':'')+'}}catch(e){o=0}return
+|     Form id: 
+|     Form action: https://linux:443/
+|     
+|     Path: https://linux:443/js/rs;if(s.useForcedLinkTracking||s.bcf){if(!s."
+|     Form id: 
+|     Form action: https://linux:443/
+|     
+|     Path: https://linux:443/js/rs;if(s.useForcedLinkTracking||s.bcf){if(!s."
+|     Form id: 
+|     Form action: https://linux:443/
+|     
+|     Path: https://linux:443/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return
+|     Form id: 
+|     Form action: https://linux:443/
+|     
+|     Path: https://linux:443/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return
+|     Form id: 
+|     Form action: https://linux:443/
+|     
+|     Path: https://linux:443/wp-login.php
+|     Form id: loginform
+|     Form action: https://linux:443/wp-login.php
+|     
+|     Path: https://linux:443/wp-login.php?action=lostpassword
+|     Form id: lostpasswordform
+|_    Form action: https://linux:443/wp-login.php?action=lostpassword
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /admin/: Possible admin folder
+|   /admin/index.html: Possible admin folder
+|   /wp-login.php: Possible admin folder
+|   /robots.txt: Robots file
+|   /readme.html: Wordpress version: 2 
+|   /feed/: Wordpress version: 4.3.25
+|   /wp-includes/images/rss.png: Wordpress version 2.2 found.
+|   /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.
+|   /wp-includes/images/blank.gif: Wordpress version 2.6 found.
+|   /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.
+|   /wp-login.php: Wordpress login page.
+|   /wp-admin/upgrade.php: Wordpress login page.
+|   /readme.html: Interesting, a readme.
+|   /0/: Potentially interesting folder
+|_  /image/: Potentially interesting folder
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_sslv2-drown: 
+MAC Address: 08:00:27:56:5D:6D (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Fri Jan 15 23:31:31 2021 -- 1 IP address (1 host up) scanned in 664.88 seconds

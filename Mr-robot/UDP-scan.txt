@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Fri Jan 15 23:18:57 2021 as: nmap -sU -oN UDP-scan.txt 192.168.1.25
+Nmap scan report for linux (192.168.1.25)
+Host is up (0.00030s latency).
+Not shown: 997 open|filtered ports
+PORT    STATE  SERVICE
+22/udp  closed ssh
+80/udp  closed http
+443/udp closed https
+MAC Address: 08:00:27:56:5D:6D (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Fri Jan 15 23:19:03 2021 -- 1 IP address (1 host up) scanned in 6.16 seconds
